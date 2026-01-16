@@ -19,9 +19,9 @@
 -- Data for Name: u_sequences; Type: TABLE DATA; Schema: public; Owner: supplier_user
 --
 
---COPY public.u_sequences (s_id, s_nextnum) FROM stdin;
---S_SEQ	3
---\.
+COPY public.u_sequences (s_id, s_nextnum) FROM stdin;
+S_SEQ	3
+\.
 
 
 --
