@@ -1,4 +1,4 @@
-# technologyconsulting-security-showcase-supplierdomain
+# cloudsovereignty-showcase-supplierdomain
 supplierdomain is a part of a showcase implementation which is running on a open liberty instance. It is structured right now like this
 
 - **supplierdomainParent** Parent maven module
@@ -15,6 +15,22 @@ and could be found under the src folder
 - **de.novatec.showcase.supplier.ejb.session** - with the order domain EJB session beans
 - **de.novatec.showcase.supplier.controller** - with corresponding REST controllers for Item, Customer and Order
 - **de.novatec.showcase.supplier.mapper** - with orika mapper fro dto/entity mapping
+
+## Environment Variables
+
+| Environment Variable         | Description                                             |
+|------------------------------|---------------------------------------------------------|
+| HTTP_PORT                    | Port on which the application listens for HTTP requests |
+| HTTPS_PORT                   | Port on which the application listens for HTTPS requests |
+| DB_HOST                      | Hostname or IP address of the database server           |
+| DB_PORT                      | Port number for connecting to the database              |
+| DB_SCHEMA                    | Database schema to use                                   |
+| DB_NAME                      | Name of the database                                     |
+| DB_USER                      | Username for database authentication                    |
+| DB_PASSWORD                  | Password for database authentication                    |
+| MANUFACTURE_DELIVER_URL      | URL endpoint for delivering components to the manufacture service |
+| MANUFACTURE_USER             | Username for authenticating with the manufacture service |
+| MANUFACTURE_PASSWORD         | Password for authenticating with the manufacture service |
 
 
 ## build, run and stop supplierdomain on an open liberty server
