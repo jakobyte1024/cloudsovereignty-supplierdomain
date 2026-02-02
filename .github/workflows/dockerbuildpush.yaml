@@ -21,14 +21,14 @@ jobs:
       with:
         username: ${{ secrets.TC_SHOWCASE_DOCKERHUB_USER }}
         password: ${{ secrets.TC_SHOWCASE_DOCKERHUB_PASSWORD }}
-        repository: novatec/technologyconsulting-showcase-supplierdomain
+        repository: 4096mm/cloudsovereignty-supplierdomain
         tags: latest, ${{ env.SHORT_SHA }} 
         tag_with_sha: true
     
     - name: Run Trivy vulnerability scanner MEDIUM,HIGH
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: 'novatec/technologyconsulting-showcase-supplierdomain:${{ env.SHORT_SHA }}'
+        image-ref: '4096mm/cloudsovereignty-supplierdomain:${{ env.SHORT_SHA }}'
         format: 'template'
         template: '@/contrib/sarif.tpl'
         output: 'trivy-results.sarif'
@@ -39,7 +39,7 @@ jobs:
     - name: Run Trivy vulnerability scanner CRITICAL
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: 'novatec/technologyconsulting-showcase-supplierdomain:${{ env.SHORT_SHA }}'
+        image-ref: '4096mm/cloudsovereignty-supplierdomain:${{ env.SHORT_SHA }}'
         format: 'template'
         template: '@/contrib/sarif.tpl'
         output: 'trivy-results.sarif'
